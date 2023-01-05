@@ -1,0 +1,605 @@
+/* Import fonts from fonts.css file */
+@import url(./fonts.css); 
+
+
+/* General CSS */
+body {
+    font-family: Gumela;
+    padding: 0.5rem 4.0rem;
+    overflow: auto;
+    color: #242D49;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
+.button {
+    border-radius: 34px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    background: linear-gradient(180deg,#fdc50f 26.71%, #fb982f 99.36%);
+    box-shadow: 0px 20px 24px 3px rgba(251,161,40,0.42);
+}
+
+.button:hover{
+    background: white;
+    color: #FCA61F;
+    border: 1px solid #FCA61F;
+
+}
+.blur {
+    position: absolute;
+    width: 22rem;
+    height: 14rem;
+    border-radius: 50%;
+    background-color: #edd0ff;
+    filter: blur(72px);
+    z-index: -9;
+    
+}
+/* End General CSS */
+
+
+/* start navigation */
+
+
+.n-wrapper {
+    position: sticky;
+    top: 0;
+    background: white;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+        margin-left: -4rem;
+    padding-left: 4rem;
+    margin-right: -4rem;
+    padding-right: 4rem;
+}
+
+.n-left {
+    flex: 1;
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+}
+
+.n-name {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.n-right{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 400;
+}
+
+.n-list{
+    flex: 10;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.n-list>ul{
+    display: flex;
+    justify-content: right;
+    gap: 2rem;
+    margin-top: 1.1rem;
+    margin-right: 4rem;
+    list-style-type: none;
+}
+
+.n-list ul li a {
+    text-decoration: none;
+    color:  #242D49;
+}
+
+
+.n-list>ul>li>a:hover{
+    color: #FCA61F;
+}
+
+/* end navigation */
+
+/* ------------------start Home Area-------------------- */
+/* start left home area */
+.home{
+    display: flex;
+    height: 70vh;
+    padding-top: 25vh;
+}
+.h-left{
+    display: flex;
+    position: relative;
+    flex: 1;
+    flex-direction: column;
+    gap: 3rem;
+}
+.h-name{
+    display: flex;
+    flex-direction: column;
+}
+
+.h-name>:nth-child(1){
+    color: #242D49;
+    font-weight: bold;
+    font-size: 3rem;
+
+}
+.h-name>:nth-child(2){
+    color:#FCA61F;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.h-name>:nth-child(3){
+    font-weight: 100;
+    font-size: 14px;
+    color:#788097;
+    margin-top: 10px;
+}
+.h-button{
+    width: 7rem;
+    height: 3rem;
+}
+.h-icons{
+    margin-top: 3rem;
+    display: flex;
+    gap: 0;
+}
+
+.h-icons>*{
+    transform: scale(0.5);
+}
+
+.h-icons>*:hover{
+    cursor: pointer;
+}
+/* end left home area */
+
+/* start right home area */
+.h-right{
+    flex: 1;
+    position: relative;
+}
+
+.h-right>*{
+    position: absolute;
+    z-index: 1;
+}
+
+
+.h-right>:nth-child(1){
+    transform: scale(0.69);
+    left: -15%;
+    top: -9%;
+}
+
+.h-right>:nth-child(2){
+    top: -4.6rem;
+    transform: scale(0.67);
+    left: -3rem;
+
+}
+.h-right>:nth-child(3){
+    transform: scale(1.4);
+    left: 28%;
+    top: 8px;
+}
+.h-right>:nth-child(7){
+    z-index: -9;
+    background: rgb(238 210 255);
+    top: -12%;
+    left: 52%;
+}
+.h-right>:nth-child(8){
+    z-index: -9;
+    background: #C1F5FF;
+    top: 20rem;
+    left: -5rem;
+}
+
+
+.glassemoji{
+    float: left;
+    transform: scale(0.6);
+    position: relative;
+    top: -9em;
+    left: -3em;
+    animation-name: moveemoji;
+    animation-duration: 4s;
+}
+
+@keyframes moveemoji{
+    from {top: -9em; left: -10em};
+    to {top:-9em;left:-3em};
+}
+
+.h-card{
+    justify-content: space-around;
+    display: flex;
+    background-color: white;
+    box-shadow: 0px 19px 60px rgb(0 0 0 / 8%);
+    border-radius: 17px;
+    align-items: center;
+    padding: 0px 28px 0px 0px;
+    height: 5.5rem;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+.h-crown{
+    top: -2%;
+    left: 58%;
+    animation-name: movecrown;
+    animation-duration: 3s;
+}
+
+@keyframes movecrown{
+    from {top: -2%; left: 75%}
+    to {top:-2%; left: 58%}
+}
+
+.h-thumbup{
+    top: 23.4rem;
+    left: 1.4rem;
+    animation-name: movethumbup;
+    animation-duration: 3s;
+}
+
+@keyframes movethumbup{
+    from {top: 23.4em; left: -2em}
+    to {top:23.4em; left: 1.4em}
+}
+
+/* end right home area */
+
+
+/*------------------- end Home Area-------------------- */
+
+
+
+
+/* ----------------start skills area------------------- */
+/* start left skills area */
+.skills{
+    padding: 10vh 4rem 0 4rem;
+    display: flex;
+    height: 70vh;
+    margin-bottom: 8rem;
+    margin-top: 9rem;
+}
+.s-left{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    position: relative;
+    gap: 3rem;
+}
+.s-button{
+    width: 9rem;
+}
+
+.s-blurl{
+    top: 20rem;
+    left: -13rem;
+    height: 12rem;
+    background: #C1F5FF;
+}
+
+
+/* end left skills area */
+
+/* start right skills area */
+.s-blurr{
+    left: 14rem;
+    top:8rem;
+    background: rgb(238 210 255);
+}
+.s-right{
+    display: flex;
+    position: relative;
+    flex: 1;
+}
+
+.card{
+    width: 15rem;
+    height: 18rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    align-items: center;
+    text-align: center;
+    background: rgba(255, 255, 255,0.26);
+    border: 7px solid rgba(252, 166, 31, 0.45);
+    border-radius: 20px;
+    padding: 0px 26px 2rem 26px;
+}
+
+
+
+.card span:nth-of-type(2){
+    color : #788097;
+    font-size: 16px;
+}
+.card-button{
+    background: #ffffff;
+    box-shadow: 0px 19px 60px rgba(0,0,0,0,0.08);
+    border-radius: 7px;
+    border: none;
+    font-size: 16px;
+    color: #5290fd;
+}
+.card1 img{
+    transform: scale(0.6);
+    margin-bottom: -2rem;
+}
+
+.card1{
+    position: absolute;
+    left: 15rem;
+    animation: moveCard1;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+}
+
+@keyframes moveCard1{
+    0% {top: 0rem; left: 16rem;}
+    25% {top: -1rem; left: 15rem}
+    50% {top: 1rem; left: 14rem;}
+    100% {top: 0rem; left: 16rem;}
+
+}
+
+.card2 {
+    position: absolute;
+    top: 10rem;
+    left: -6rem;
+    animation: moveCard2;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+}
+
+@keyframes moveCard2{
+    0% {top: 10rem; left: -6rem;}
+    25% {top: 9rem; left: -5rem}
+    50% {top: 11rem; left: -4rem;}
+    100% {top: 10rem; left: -6rem;}
+
+}
+.card2 img{
+    transform: scale(0.65);
+    margin-top: 1rem;
+    margin-bottom: -1rem;
+}
+
+.card3 {
+    position: absolute;
+    top: 22rem;
+    left: 12rem;
+    animation: moveCard3;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+}
+
+@keyframes moveCard3{
+    0% {top: 22rem; left: 12rem;}
+    25% {top: 23rem; left: 11rem}
+    50% {top: 21rem; left: 13rem;}
+    100% {top: 22rem; left: 12rem;}
+
+}
+
+.card3 img{
+    transform: scale(0.7);
+    margin-top: 1.2rem;
+}
+/* end right skills area */
+
+/* -----------------end skills area-------------------- */
+
+/* -----------------start education area ---------------*/
+.education{
+    display: flex;
+    height: 80vh;
+    align-items: center;
+    gap: 10rem;
+    justify-content: center;
+}
+.courses{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 12rem;
+    height: 12rem;
+    background: white;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.courses:hover{
+    box-shadow: 0px 19px 60px rgb(0 0 0 / 8%);
+    background-image: linear-gradient(to bottom,#87e6fb 0%,rgb(243, 243, 149));
+}
+
+.courses::before{
+    position: absolute;
+    border-radius: 100%;
+    content: '';
+    background-image: linear-gradient(to bottom,#87e6fb 0%,rgb(243, 243, 149));
+    top: -8px;
+    left: -8px;
+    bottom: -8px;
+    right: -8px;
+    z-index: -1;
+    box-shadow: 0px 19px 60px rgb(0 0 0 / 8%);
+}
+
+
+.courses span:nth-of-type(2){
+    color: #788097;
+    font-weight: lighter;
+}
+
+.courses span:nth-of-type(1){
+    color: #FCA61F;
+    font-size: large;
+}
+
+/* -----------------end education area----------------- */
+
+/* -----------------start portfolio area--------------- */
+
+.portfolio{
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;    
+}
+.p-text{
+    text-align: center;
+    margin-top: 6rem;
+}
+.p-text>:nth-child(1){
+    font-size: 2.5rem;
+}
+.p-text>:nth-child(2){
+    font-size: 3.3rem;
+    margin-top: -1rem;
+}
+
+.p-gallery {
+    position: relative;
+    height: 231.775px;
+    width: 480px;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.p-card{
+    width: 30rem;
+    height: 25rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    /* gap: 0.3rem;
+    align-items: center;
+    text-align: center;
+    background: rgba(255, 255, 255,0.26);
+    border: 7px solid rgba(252, 166, 31, 0.45);
+    border-radius: 20px;
+    padding: 0px 26px 2rem 26px; */
+}
+
+/* .p-card a img {
+    position: relative;
+    transform: scale(0.4);
+} */
+
+
+
+/* -----------------end portfolio area--------------- */
+
+
+/* -----------------start contact area--------------- */
+.contact{
+    padding: 10rem;
+    display: flex;
+}
+.c-left{
+    position: relative;
+    flex: 1;
+    margin-top: 6rem;
+}
+
+
+.c-right{
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.c-right form{
+    display: flex;
+    flex-direction: 1;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 28rem;
+    
+}
+
+.c-right form>*{
+    border: 2px solid  #F5C32C;
+    border-radius: 0.4rem;
+    outline-color: #fb982f;
+    
+}
+
+.c-right form>*:hover{
+    border: 2.4px solid #FCA61F;
+}
+
+.c-right input {
+    height: 3rem;
+    width: 28rem;
+}
+
+.c-right textarea {
+    height: 10rem;
+    width: 28rem;
+}
+
+.f-button {
+    width: 7rem;
+    border-radius: 100rem;
+}
+
+.c-blurl{
+    background: #C1F5FF;
+    left: -20rem;
+    top: 13rem;
+}
+.c-blurr{
+    left: 15rem;
+}
+
+
+/* -----------------end contact area---------------- */
+
+.ending {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transform: scale(0.8);
+    margin-top: -20rem;
+    margin-bottom: -20rem;
+    width: 73.2vw;
+}
+
+.detail{
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+
