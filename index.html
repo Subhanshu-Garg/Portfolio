@@ -12,6 +12,9 @@
 
     <!-- custom css file -->
     <link rel="stylesheet" href="./css/style.css">
+
+    <!-- owl corousel css file -->
+    <link rel="stylesheet" href="./css/scss/owl.theme.default.scss">
 </head>
 
 <body>
@@ -52,16 +55,17 @@
             <div class="h-name">
                 <span>Hy! I Am</span>
                 <span>Subhanshu Garg</span>
-                <span>Final year undergrad <em>@MANIT Bhopal.</em> Competitive Coder and and have basic knowledge of
-                    Front end development.</span>
+                <!-- <span>Final year undergrad <em>@MANIT Bhopal.</em> Competitive Coder and and have basic knowledge of
+                    Front end development.</span> -->
+                <span>I am a final year student at Maulana Azad National Institute of Technology in Bhopal, India. I have a CGPA of 7.6 and am graduating in 2023. I am skilled in web development and have experience with various technologies including C++, HTML, CSS, JavaScript, and more. I am also proficient in data structures, algorithms, and database management.</span>
             </div>
-            <a href="mailto: gargshubhanshu89@gmail.com">
+            <a href="mailto: gargshubhanshu89@gmail.com" target="_blank">
                 <button class="button h-button">Hire me</button>
             </a>
             <div class="h-icons">
-                <img src="img/github.png" alt="github">
-                <img src="img/linkedin.png" alt="linkedin">
-                <img src="img/instagram.png" alt="instagram">
+                <a href="https://github.com/Subhanshu-Garg" target="_blank"><img src="img/github.png" alt="github"></a>
+                <a href="https://www.linkedin.com/in/subhanshugarg" target="_blank"><img src="img/linkedin.png" alt="linkedin"></a>
+                <a href="https://www.instagram.com/garg.shubhanshu/" target="_blank"><img src="img/instagram.png" alt="instagram"></a>
             </div>
         </div>
         <div class="h-right">
@@ -69,15 +73,15 @@
             <img src="img/Vector2.png" alt="">
             <img src="img/boy.png" alt="">
 
-            <div class="glassemoji">
+            <div id="glassemoji">
                 <img src="img/glassesimoji.png" alt="">
             </div>
 
-            <div class="h-card h-crown">
+            <div id="h-crown" class="h-card">
                 <img src="img/crown.png" alt="" style="transform: scale(0.4);">
-                <span>Web<br>developer</span>
+                <span>Full-stack<br>WebDeveloper</span>
             </div>
-            <div class="h-card h-thumbup">
+            <div id="h-thumbup" class="h-card">
                 <img src="img/thumbup.png" alt=""  style="transform: scale(0.4);">
                 <span>Competitive<br>Coder</span>
             </div>
@@ -99,7 +103,7 @@
             <div class="h-name s-text">
                 <span>My Awesome</span>
                 <span>Skills</span>
-                <span>Always trying to add more. Want to learn something <br> and teach something please feel free to contact me. <br> Let's learn it together.</span>
+                <span>Mastering web development and data structures,<br/> constantly learning new technologies and eager to adapt in the <br/>dynamic world of MERN stack and beyond</span>
             </div>
             
             <a href="/downloads/Subhanshu's Resume.pdf" download>
@@ -117,12 +121,14 @@
                 <img src="img/heartemoji.png" alt="">
                 <span>Programming Languages</span>
                 <span>C++, JavaScript</span>
-                <button class="card-button">Github</button>
+                <a href="https://github.com/Subhanshu-Garg" target="_blank">
+                    <button class="card-button">Github</button>
+                </a>
             </div>
             <div class="card card2">
                 <img src="img/glasses.png" alt="">
-                <span>Data Structures And Algorithms</span>
-                <span>Check out my profile on</span>
+                <span>Core Subjects</span>
+                <span>Data Structures and Algorithms, DBMS, OOPs, OS</span>
                 <a href="https://leetcode.com/Subhanshu_Garg/" target="_blank" >
                     <button class="card-button">LeetCode</button>
                 </a>
@@ -130,9 +136,11 @@
             </div>
             <div class="card card3">
                 <img src="img/humble.png" alt="">
-                <span>Frontend Developer</span>
-                <span>HTML, CSS, Bootstrap</span>
-                <button class="card-button">Projects</button>
+                <span>Web Developer</span>
+                <span>HTML, CSS, Bootstrap, MERN stack, OAuth</span>
+                <a href="#portfolio">
+                    <button class="card-button">Projects</button>
+                </a>
             </div>
             <div class="blur s-blurr"></div>
         </div>
@@ -145,7 +153,7 @@
     <div id="education" class="education">
         <div class="courses">
             <span>B.Tech</span>
-            <span>7.52 CGPA</span>
+            <span>7.6 CGPA</span>
             <span>MANIT</span>
             <span>2019-23</span>
         </div>
@@ -172,13 +180,24 @@
             <span>Recent Projects</span>
             <span>Portfolio</span>
         </div>
-        <div class="p-gallery">
+        <!-- <div class="p-gallery">
             <div class="p-card">
                 <a href="https://www.youtube.com/watch?v=Fxmtu-fuD84" target="_blank" rel="noopener noreferrer">
                     <img src="img/rationery.png" alt="Rationery Project">          
                 </a> 
             </div>
+        </div> -->
+            
+        <div class="owl-carousel">
+            <div>Slide 1</div>
+            <div>Slide 2</div>
+            <div>Slide 3</div>
         </div>
+        
+        <!-- Initialize the carousel using JavaScript -->
+        <script>
+        $('.owl-carousel').owlCarousel();
+        </script>
     </div>
 
 
@@ -194,15 +213,13 @@
             <div class="blur c-blurl"></div>
         </div>
         <div class="c-right">
-            <form action="mailto: gargshubhanshu89@gmail.com" method="post" enctype="text/plain">
+            <form action="mailto: gargshubhanshu89@gmail.com" method="post">
                 <input type="text" id="Name" placeholder="Name">
                 <input type="email" id="Email" placeholder="Email">
                 <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-                <input type="submit" value="Send"  class="button">
+                <button class="button" type="submit">Send</button>
             </form>
-            
-            
-
+            <!-- <button class="button" type="submit">Send</button> -->
             <div class="blur c-blurr"></div>
         </div>
     </div>
@@ -233,9 +250,13 @@
 
     <!-- Jquery file (Have to learn more about it) -->
     <script src="./js/jquery.3.6.0.js"></script>
-
     <!-- Bootstrap js file -->
     <script src="./js/bootstrap.min.js"></script>
+
+    <script src="./js/index.js"></script>
+
+    <script src="jquery.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
 
 </body>
 
