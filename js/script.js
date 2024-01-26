@@ -50,3 +50,9 @@ nextButton.addEventListener('click', () => {
         item.style.display = 'block';
     });
 });
+
+const contactForm = document.querySelector('#contactForm');
+
+contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+} )
