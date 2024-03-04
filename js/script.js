@@ -1,27 +1,21 @@
-const glassemoji = document.querySelector('#glassemoji');
-const hCrown = document.querySelector('#h-crown');
-const hThumbup = document.querySelector('#h-thumbup');
+const animation = document.querySelectorAll('.animation')
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
           // element is in the viewport
-            glassemoji.classList.add('glassemoji');
-            hCrown.classList.add('h-crown');
-            hThumbup.classList.add('h-thumbup');
+            entry.target.classList.add(`${entry.target.id}`)
         } else {
           // element is not in the viewport
-            glassemoji.classList.remove('glassemoji');
-            hCrown.classList.remove('h-crown');
-            hThumbup.classList.remove('h-thumbup');
+          entry.target.classList.remove(`${entry.target.id}`)
         }
     });
     
 });
 
-observer.observe(glassemoji);
-observer.observe(hCrown);
-observer.observe(hThumbup);
+animation.forEach((element) => {
+    observer.observe(element)
+})
 
 /////////////////carousel//////////////////////////////
 
