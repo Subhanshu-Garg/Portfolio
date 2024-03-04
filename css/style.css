@@ -3,6 +3,10 @@
 
 
 /* General CSS */
+html {
+    overflow-x: hidden;
+    width: 100vw;
+}
 body {
     font-family: Gumela;
     padding: 0.5rem 4vw;
