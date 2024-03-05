@@ -46,6 +46,9 @@ body *{
     z-index: -9;
     max-width: 70vw;
 }
+.animation {
+    opacity: 0;
+}
 /* End General CSS */
 
 

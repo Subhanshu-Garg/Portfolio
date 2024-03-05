@@ -3,13 +3,15 @@ const animation = document.querySelectorAll('.animation')
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
+            entry.target.style.opacity = 1
           // element is in the viewport
             entry.target.classList.add(`${entry.target.id}`)
         } else {
+            entry.target.style.opacity = 0
           // element is not in the viewport
           entry.target.classList.remove(`${entry.target.id}`)
         }
-    });
+    }); 
     
 });
 
