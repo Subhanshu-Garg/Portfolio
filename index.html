@@ -212,10 +212,10 @@
             <div class="blur c-blurl"></div>
         </div>
         <div class="c-right">
-            <form id="contactForm" action="">
-                <input type="text" id="Name" placeholder="Name">
-                <input type="email" id="Email" placeholder="Email">
-                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+            <form id="contactForm">
+                <input type="text" name="name" id="Name" placeholder="Name" required>
+                <input type="email" name="email" id="Email" placeholder="Email" required>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
                 <button class="button" type="submit">Send</button>
             </form>
             <!-- <button class="button" type="submit">Send</button> -->
@@ -232,7 +232,7 @@
     <div class="ending">
         <img class="endingImg" src="img/wave.png" alt="">
             <div class="detail">
-                <span>gargshubhanshu@gmail.com</span>
+                <span style="color: #eb9100;">gargshubhanshu@gmail.com</span>
                 <br>
                 <div class="h-icons">
                     <a href="https://github.com/Subhanshu-Garg" target="_blank"><img src="img/github.png" alt="github"></a>
@@ -252,7 +252,7 @@
     <script src="./js/jquery.3.6.0.js"></script>
     <!-- Bootstrap js file -->
     <script src="./js/bootstrap.min.js"></script>
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="./js/script.js"></script>
 
     <script src="jquery.min.js"></script>
