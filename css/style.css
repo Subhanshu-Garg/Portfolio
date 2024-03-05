@@ -44,7 +44,7 @@ body *{
     background-color: #edd0ff;
     filter: blur(72px);
     z-index: -9;
-    
+    max-width: 70vw;
 }
 /* End General CSS */
 
@@ -281,8 +281,8 @@ body *{
 }
 
 .s-blurl{
-    top: 20rem;
-    left: -13rem;
+    top: 20vh;
+    left: -13vw;
     height: 12rem;
     background: #C1F5FF;
 }
@@ -292,8 +292,6 @@ body *{
 
 /* start right skills area */
 .s-blurr{
-    left: 14rem;
-    top:8rem;
     background: rgb(238 210 255);
 }
 .s-right{
@@ -386,6 +384,7 @@ body *{
 
 /* -----------------start education area ---------------*/
 .education{
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -458,6 +457,15 @@ body *{
     animation: moveCourse 3s;
 }
 
+.e-blurl {
+    left: 0vw;
+}
+
+.e-blurr {
+    background: #C1F5FF;
+    right: 5vw;
+    top: 70vh;
+}
 
 /* -----------------end education area----------------- */
 
@@ -572,11 +580,11 @@ body *{
 
 .c-blurl{
     background: #C1F5FF;
-    left: -20rem;
-    top: 13rem;
+    left: -20vw;
+    top: 13vh;
 }
 .c-blurr{
-    left: 15rem;
+    left: 15vw;
 }
 
 
@@ -585,9 +593,12 @@ body *{
 .ending {
     position: relative;
     z-index: -1;
-    height: 50vh;
+    height: 70vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
-.ending img {
+.endingImg {
     position: absolute;
     top: 0;
     left: 0;
@@ -596,10 +607,12 @@ body *{
     object-fit: cover; /* Ensures the image covers the entire container */
 }
 .detail{
-    position: absolute;
+    position: relative;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 1.4rem;
+    font-size: 16px;
 }
 
 @media (max-width: 719px) {
