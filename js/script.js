@@ -18,7 +18,7 @@ animation.forEach((element) => {
 })
 
 const myName = 'Subhanshu';
-const designation = "Software Developer";
+const designation = "Programmer";
 const introElement = document.querySelector('#intro');
 async function typeOutText(text, element, delay = 100) {
     introElement.innerHTML = '|'
