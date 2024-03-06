@@ -127,3 +127,22 @@ buttons.forEach((button) => {
     });
 })
 
+const pEmojiButton = document.querySelector('.cowBoyEmoji');
+
+pEmojiButton.addEventListener('click', function() {
+    // Select all .p-card elements inside the event handler
+    
+    const pcards = document.querySelectorAll('.p-card');
+
+    // Clone the first card
+    const firstCard = pcards[0].cloneNode(true);
+    firstCard.classList.add('rotate');
+    // Store the parent element of the cards
+    const parentElement = pcards[0].parentElement;
+
+    // Remove the first card from its parent
+    parentElement.removeChild(pcards[0]);
+
+    // Append the cloned first card to the end of its parent
+    parentElement.appendChild(firstCard);
+});
