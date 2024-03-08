@@ -122,6 +122,7 @@ img, video, iframe, object {
 .h-name{
     display: flex;
     flex-direction: column;
+    text-align: justify;
 }
 
 .h-name>:nth-child(1){
@@ -467,7 +468,8 @@ img, video, iframe, object {
 .e-blurr {
     background: #C1F5FF;
     right: 5vw;
-    top: 70vh;
+    top: 80vh;
+    height: 25rem;
 }
 
 /* -----------------end education area----------------- */
@@ -477,23 +479,32 @@ img, video, iframe, object {
 .portfolio{
     display: grid;  
     padding: 5rem 10vw 0 5vw;
-    grid-template-areas: 'p-name p-name'
+    grid-template-areas: 'p-gallery p-name'
                         'p-gallery p-emoji';
     max-width: 100vw;   
     gap: 3vh;
     /* overflow: hidden; */
 }
+
+.p-blur-1{
+    background: #C1F5FF;
+    right: 0vw;
+    justify-self: flex-end;
+}
+.p-blur-2 {
+    justify-self: flex-end;
+    align-self: flex-end;
+}
 .p-text {
-    text-align: right;
     grid-area: p-name;
 }
-.p-text>:nth-child(1){
+/* .p-text>:nth-child(1){
     font-size: 2.5rem;
 }
 .p-text>:nth-child(2){
     font-size: 3.3rem;
     margin-top: -1rem;
-}
+} */
 
 
 
@@ -513,6 +524,7 @@ img, video, iframe, object {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 25vh;
 }
 
 .p-card{
@@ -529,7 +541,7 @@ img, video, iframe, object {
     border-radius: 20px;
     transform: rotateY(20deg);
     transform-origin: center;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 20px 40px #C1F5FF;
     background-color: white;
     position: absolute;
     transition: transform 0.5s ease-in-out;
@@ -615,9 +627,9 @@ img, video, iframe, object {
     filter: brightness(110%);
 }
 
-.cowBoyEmoji img:hover {
+/* .cowBoyEmoji img:hover {
     animation: none;
-}
+} */
 /* -----------------end portfolio area--------------- */
 
 
@@ -734,6 +746,7 @@ img, video, iframe, object {
         width: 90vw;
         height: 50vh;
         gap: 10vh;
+        padding-top: initial;
     }
     .p-card{
         width: 80vw;

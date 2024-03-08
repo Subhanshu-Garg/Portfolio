@@ -127,7 +127,7 @@ buttons.forEach((button) => {
     });
 })
 
-const pEmojiButton = document.querySelector('.cowBoyEmoji');
+const pEmojiButton = document.querySelector('.cowBoyEmoji img');
 
 pEmojiButton.addEventListener('click', function() {
     // Select all .p-card elements inside the event handler
