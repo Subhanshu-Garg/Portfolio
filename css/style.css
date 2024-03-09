@@ -574,16 +574,17 @@ img, video, iframe, object {
     background-image: linear-gradient(to bottom,#87e6fb 0%,rgb(243, 243, 149));
     border-radius: 14px;
 }
-.text {
+.pg-text {
     color: #FCA61F;
-    font-size: 20px;
-    position: absolute;
+    font-size: 2vh;
+    position: relative;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    text-align: center;
+    text-align: justify;
+    padding: 2rem;
 }
 .p-card:nth-child(2) {
     transform: rotateY(20deg) translateZ(-10vw); /* Adjust translateZ for second card */
