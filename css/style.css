@@ -187,8 +187,8 @@ img, video, iframe, object {
 }
 .h-right>:nth-child(3){
     transform: scale(1.4);
-    left: 28%;
-    top: 8px;
+    left: 32%;
+    top: 10px;
 }
 .h-right>:nth-child(7){
     z-index: -9;
@@ -571,12 +571,12 @@ img, video, iframe, object {
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-    background-image: linear-gradient(to bottom,#87e6fb 0%,rgb(243, 243, 149));
+    background-image: linear-gradient(to bottom,#87e6fb 0%,rgb(243, 243, 149, 0.6));
     border-radius: 14px;
 }
 .pg-text {
-    color: #FCA61F;
-    font-size: 2vh;
+    color: #000000;
+    font-size: 2.4vh;
     position: relative;
     top: 50%;
     left: 50%;
@@ -613,6 +613,13 @@ img, video, iframe, object {
     align-items: flex-end;
     justify-content: center;
     margin-bottom: 14vh;
+}
+
+.clickHere {
+    position: relative;
+    grid-area: p-emoji;
+    left: 50%;
+    top: 50%;
 }
 
 @keyframes bounce {
