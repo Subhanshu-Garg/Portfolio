@@ -1,3 +1,23 @@
+function removeActiveClasses() {
+  const links = document.querySelectorAll('.n-list > ul > li > a')
+  links.forEach((link) => link.classList.remove('active'))
+}
+
+function setActiveLink() {
+  let hash = window.location.hash
+  hash = hash || '#home'
+  removeActiveClasses()
+  const activeLink = document.querySelector(
+    `.n-list > ul > li > a[href="${hash}"]`
+  )
+  if (activeLink) {
+    activeLink.classList.add('active')
+  }
+}
+
+window.addEventListener('load', setActiveLink)
+window.addEventListener('hashchange', setActiveLink)
+
 const animation = document.querySelectorAll('.animation')
 
 const observer = new IntersectionObserver((entries) => {
@@ -146,3 +166,5 @@ pEmojiButton.addEventListener('click', function() {
     // Append the cloned first card to the end of its parent
     parentElement.appendChild(firstCard);
 });
+
+

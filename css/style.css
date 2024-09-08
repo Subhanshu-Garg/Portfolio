@@ -99,8 +99,7 @@ img, video, iframe, object {
     color:  #242D49;
 }
 
-
-.n-list>ul>li>a:hover{
+.n-list>ul>li>a.active{
     color: #FCA61F;
 }
 
@@ -189,6 +188,7 @@ img, video, iframe, object {
     transform: scale(1.4);
     left: 32%;
     top: 10px;
+    border-bottom-right-radius: 90px;
 }
 .h-right>:nth-child(7){
     z-index: -9;
@@ -775,5 +775,9 @@ img, video, iframe, object {
     }
     .c-left{
         margin-top: 0;
+    }
+
+    .pg-text{
+        font-size: 1.4vh;
     }
 }
