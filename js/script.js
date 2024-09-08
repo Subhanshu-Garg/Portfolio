@@ -18,6 +18,17 @@ function setActiveLink() {
 window.addEventListener('load', setActiveLink)
 window.addEventListener('hashchange', setActiveLink)
 
+const darkModeToggle = document.querySelector('#darkmode-toggle')
+let enableDarkMode = false
+darkModeToggle.addEventListener('click', () => {
+  enableDarkMode = !enableDarkMode
+  if (enableDarkMode) {
+    document.body.classList.add('dark-mode')
+  } else {
+    document.body.classList.remove('dark-mode')
+  }
+})
+
 const animation = document.querySelectorAll('.animation')
 
 const observer = new IntersectionObserver((entries) => {
