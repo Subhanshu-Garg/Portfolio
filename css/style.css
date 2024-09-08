@@ -239,10 +239,12 @@ input:not(:checked)+.slider .moon {
 .h-icons {
     display: flex;
     gap: 0;
+    flex-wrap: wrap;
 }
 
 .h-icons>* {
     transform: scale(0.5);
+    width: 80px;
 }
 
 .h-icons>*:hover {
