@@ -19,7 +19,8 @@ window.addEventListener('load', setActiveLink)
 window.addEventListener('hashchange', setActiveLink)
 
 const darkModeToggle = document.querySelector('#darkmode-toggle')
-let enableDarkMode = false
+const currentHour = new Date().getHours() 
+let enableDarkMode = currentHour >= 19 ||  currentHour < 7
 darkModeToggle.addEventListener('click', () => {
   enableDarkMode = !enableDarkMode
   if (enableDarkMode) {
